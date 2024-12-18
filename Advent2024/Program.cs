@@ -12,8 +12,7 @@ namespace Advent2024 {
 
             // Get all types
             var implementingTypes = assembly.GetTypes().Where(t => typeof(AdventDay).IsAssignableFrom(t) && t.IsClass && !t.IsAbstract).ToArray();
-
-            AdventDay advendDay = (AdventDay)Activator.CreateInstance(implementingTypes[day - 1]);
+            AdventDay advendDay = (AdventDay)Activator.CreateInstance(assembly.GetType($"Advent2024.AdventDay{day}"));
 
             string[] input = File.ReadAllLines($@"C:\Users\alejandro\Desktop\Advent 2024\Advent2024\Inputs\Day_{day}.txt");
 
