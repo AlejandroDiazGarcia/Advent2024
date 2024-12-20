@@ -62,7 +62,7 @@ namespace Advent2024 {
         private string GetString(int x, int y, int xIncrement, int yIncrement) {
 
             string key = $"";
-            for(int i = 0; i < KeyLength; i++) {
+            for (int i = 0; i < KeyLength; i++) {
                 key += $"{input[x + (xIncrement * i)][y + (yIncrement * i)]}";
             }
 
@@ -95,7 +95,7 @@ namespace Advent2024 {
 
             // Downwards
             if (x < input[0].Length - KeyLength + 1) {
-                if (y < input[0].Length - KeyLength + 1 && (GetString(x, y, 1, 1) == KEY || GetString(x, y, 1, 1) == KEY_BACK) && 
+                if (y < input[0].Length - KeyLength + 1 && (GetString(x, y, 1, 1) == KEY || GetString(x, y, 1, 1) == KEY_BACK) &&
                     (GetString(x, y + 2, 1, -1) == KEY || GetString(x + 2, y, -1, 1) == KEY)) result++;
             }
 

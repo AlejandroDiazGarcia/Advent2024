@@ -1,7 +1,4 @@
 ﻿
-using static System.Net.Mime.MediaTypeNames;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace Advent2024 {
 
     public class AdventDay11 : AdventDay {
@@ -73,12 +70,12 @@ namespace Advent2024 {
                 copy = new Dictionary<long, long>(map);
 
                 // Go through each stone number
-                foreach(var stone in copy) {
+                foreach (var stone in copy) {
 
                     // Remove old stones number
                     map[stone.Key] -= copy[stone.Key];
 
-                    if (stone.Key == 0){
+                    if (stone.Key == 0) {
 
                         // Zero stones become 1's
                         if (!map.ContainsKey(1)) map.Add(1, 0);
@@ -125,8 +122,8 @@ namespace Advent2024 {
 
         public Stone Blink() {
 
-            if(Number == 0) Number = 1;
-            else if(Number.ToString().Length % 2 == 0) {
+            if (Number == 0) Number = 1;
+            else if (Number.ToString().Length % 2 == 0) {
                 Stone next = Next != null ? Next.ShallowCopy() : Next;
                 string numberString = Number.ToString();
                 Number = Convert.ToInt64(numberString.Substring(0, numberString.Length / 2));

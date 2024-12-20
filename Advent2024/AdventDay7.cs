@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Advent2024 {
+﻿namespace Advent2024 {
 
     public class AdventDay7 : AdventDay {
 

@@ -97,10 +97,10 @@
         private bool CheckRules(int[] numbers) {
 
             bool valid = true;
-            for (int i = 0; i < numbers.Length - 1; i++) { 
+            for (int i = 0; i < numbers.Length - 1; i++) {
                 Update update = updates.FirstOrDefault(x => x.Id == numbers[i]);
-                if(update == null || !update.Children.Any(x => x.Id == numbers[i + 1])) {
-                    valid = false; 
+                if (update == null || !update.Children.Any(x => x.Id == numbers[i + 1])) {
+                    valid = false;
                     break;
                 }
             }

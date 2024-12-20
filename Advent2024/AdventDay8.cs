@@ -55,7 +55,7 @@
                             while ((x = antenna.Item1 - (resonance * xDif)) >= 0) {
 
                                 int y = antenna.Item2 + (resonance * (antenna.Item2 - second.Item2));
-                                if (y >= 0 && y < inputLength) {    
+                                if (y >= 0 && y < inputLength) {
                                     antinodes[x, y] = '#';
                                 }
                                 else {
@@ -72,7 +72,7 @@
                             while ((x = second.Item1 + (resonance * xDif)) < inputLength) {
 
                                 int y = second.Item2 + (resonance * (second.Item2 - antenna.Item2));
-                                if (y >= 0 && y < inputLength) {       
+                                if (y >= 0 && y < inputLength) {
                                     antinodes[x, y] = '#';
                                 }
                                 else {

@@ -23,7 +23,7 @@ namespace Advent2024 {
 
             for (int i = 0; i < input.Length; i++) {
 
-                if(i % 4 < 2) {
+                if (i % 4 < 2) {
                     // Equations
                     match = Regex.Match(input[i], pattern);
 
@@ -62,7 +62,7 @@ namespace Advent2024 {
                     long determinantA = c1 * b2 - c2 * b1;
                     long determinantB = a1 * c2 - a2 * c1;
 
-                    if(determinantA % determinant != 0 || determinantB % determinant != 0) {
+                    if (determinantA % determinant != 0 || determinantB % determinant != 0) {
                         continue;
                     }
 

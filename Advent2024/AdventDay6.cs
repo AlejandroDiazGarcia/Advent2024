@@ -26,7 +26,7 @@
 
             for (int i = 0; i < input.Length; i++) {
 
-                for (int j = 0; j < input[i].Length ; j++) {
+                for (int j = 0; j < input[i].Length; j++) {
 
                     if (input[i][j] == '.') {
                         string[] newInput = (string[])input.Clone();
@@ -71,7 +71,7 @@
                     PositionX = i;
                     if (input[i].Any(x => x == '>')) {
                         PositionY = input[i].IndexOf('>');
-                        IncrementX = 0; 
+                        IncrementX = 0;
                         IncrementY = 1;
                         direction = Direction.Right;
                     }
@@ -131,7 +131,7 @@
 
         public void Turn() {
 
-            if(direction == Direction.Up) {
+            if (direction == Direction.Up) {
                 IncrementX = 0;
                 IncrementY = 1;
                 direction = Direction.Right;

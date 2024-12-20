@@ -28,7 +28,7 @@
 
                     // Check if we've already processed that coordinate
                     Tuple<int, int> coord = Tuple.Create(i, j);
-                    if (!plots.Values.Any(x => x.Coords.Contains(coord))){
+                    if (!plots.Values.Any(x => x.Coords.Contains(coord))) {
 
                         // Check garden
                         CheckGarden(i, j, discount);
@@ -48,7 +48,7 @@
 
         private void CheckGarden(int x, int y, bool discount = false) {
 
-            if(!plots.ContainsKey(input[x][y])) plots.Add(input[x][y], new Plot());
+            if (!plots.ContainsKey(input[x][y])) plots.Add(input[x][y], new Plot());
 
             // Check if this square has already been checked
             Tuple<int, int> coord = Tuple.Create(x, y);
@@ -64,7 +64,7 @@
 
             // Vertical            
             if (x < inputLength - 1 && input[x][y] == input[x + 1][y]) CheckGarden(x + 1, y, discount);
-            else if(!discount) plots[input[x][y]].Perimeter++;
+            else if (!discount) plots[input[x][y]].Perimeter++;
 
             if (x > 0 && input[x][y] == input[x - 1][y]) CheckGarden(x - 1, y, discount);
             else if (!discount) plots[input[x][y]].Perimeter++;
